@@ -83,7 +83,7 @@ var mail    = function (host, debug) {
         socket.on("close", function() {
             
             that.emit("connectionClosed", { client: { address: socket.remoteAddress, port: socket.remotePort }} );
-            util.log(that.debug, "Connection closed");
+            log(that.debug, "Connection closed");
 
         });
 
