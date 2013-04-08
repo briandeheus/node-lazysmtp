@@ -1,6 +1,6 @@
-var net     = require("net");
+var net           = require("net");
 var EventEmitter  = require("events").EventEmitter;
-var util    = require("util");
+var util          = require("util");
 
 var Mail    = function (host, debug) {
     EventEmitter.call(this);
