@@ -1,6 +1,6 @@
 {
     "name": "lazysmtp",
-    "version": "0.0.1",
+    "version": "0.0.6",
     "description": "A very, very simple to use SMTP server to accept incoming mail for node.js",
     "keywords": ["smtp", "simple", "mail"],
     "homepage": "https://github.com/briandeheus/node-lazysmtp",
@@ -12,6 +12,10 @@
             "url": "http://twitter.com/briandesu"
         }
     ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/briandeheus/node-lazysmtp.git"
+    },
     "engine": "node >= 0.6.1"    
 
 }
