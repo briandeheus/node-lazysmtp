@@ -1,8 +1,9 @@
-var net     = require("net");
-var events  = require("events");
-var util    = require("util");
+var net           = require("net");
+var EventEmitter  = require("events").EventEmitter;
+var util          = require("util");
 
-var mail    = function (host, debug) {
+var Mail    = function (host, debug) {
+    EventEmitter.call(this);
     
     this.debug      = debug;
     this.host       = host;
@@ -166,6 +167,9 @@ var mail    = function (host, debug) {
 
 };
 
+util.inherits(Mail, EventEmitter);
+
+
 function log(debug, message) {
     
     if(debug) {
@@ -176,5 +180,4 @@ function log(debug, message) {
 
 }
 
-mail.prototype = new events.EventEmitter;
-exports.Mail = mail;
+exports.Mail = Mail;
