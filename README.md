@@ -18,11 +18,17 @@ Instantiate a new Mail class. Has one method that allows you to start the server
 
 #### events
 * mail
-The most important one. Fires when mail an e-mail has been received. Returns the entire e-mail as a string. (Including headers)
+
+    The most important one. Fires when mail an e-mail has been received. Returns the entire e-mail as a string. (Including headers)
+
 * connectionIncoming
-Fires whenever a connection is made to the server on your designated port by a client. Contains an object with client information.
+
+    Fires whenever a connection is made to the server on your designated port by a client. Contains an object with client information.
+
 * connectionClosed
-Fires whenever a connection to the server is closed. Contains an object with client information.
+
+    Fires whenever a connection to the server is closed. Contains an object with client information.
+
 
 ##Example:
 
