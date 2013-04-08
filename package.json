@@ -1,6 +1,6 @@
 {
     "name": "lazysmtp",
-    "version": "0.0.6",
+    "version": "0.0.8",
     "description": "A very, very simple to use SMTP server to accept incoming mail for node.js",
     "keywords": ["smtp", "simple", "mail"],
     "homepage": "https://github.com/briandeheus/node-lazysmtp",
@@ -10,6 +10,10 @@
         {
             "name": "Brian de Heus",
             "url": "http://twitter.com/briandesu"
+        },
+        {   
+            "name":"Mark S. Everitt",
+            "url":"https://github.com/qubyte"
         }
     ],
     "repository": {
