@@ -4,7 +4,7 @@ var util    = require("util");
 
 var mail    = function (host, debug) {
     
-    this.debug      = debug || true;
+    this.debug      = debug;
     this.host       = host;
     var that        = this;
 
@@ -17,7 +17,7 @@ var mail    = function (host, debug) {
         //Start handshake
         log(that.debug, "Client connected:" + client);
         
-        that.emit("connectionIncoming", { client: { address: socket.remoteAddress, port: socket.remotePort });
+        that.emit("connectionIncoming", { client: { address: socket.remoteAddress, port: socket.remotePort }});
 
         replies.connect(socket);
         
@@ -82,7 +82,7 @@ var mail    = function (host, debug) {
 
         socket.on("close", function() {
             
-            that.emit("connectionClosed", { client: { address: socket.remoteAddress, port: socket.remotePort } );
+            that.emit("connectionClosed", { client: { address: socket.remoteAddress, port: socket.remotePort }} );
             util.log(that.debug, "Connection closed");
 
         });
@@ -157,11 +157,10 @@ var mail    = function (host, debug) {
 
     };
 
-    this.start = function () {
-
-        server.listen(25);
+    this.start = function (port) {
+        
         log(that.debug, "Starting lazysmtp");
-        that.emit("started");
+        server.listen(port || 25);
 
     }
 
@@ -178,4 +177,4 @@ function log(debug, message) {
 }
 
 mail.prototype = new events.EventEmitter;
-exports.mail = mail;
+exports.Mail = mail;
