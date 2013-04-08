@@ -159,7 +159,7 @@ var mail    = function (host, debug) {
 
     this.start = function () {
 
-        server.listen(1337);
+        server.listen(25);
         log(that.debug, "Starting lazysmtp");
         that.emit("started");
 
