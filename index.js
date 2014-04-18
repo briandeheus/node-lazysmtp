@@ -68,7 +68,7 @@ var Mail    = function (host, debug) {
           
                 replies.quit(socket);  
             
-            } else if(/^.\r\n/m.test(data)) {
+            } else if(/^\.\r\n/m.test(data)) {
 
                 replies.end(socket, data);
         
